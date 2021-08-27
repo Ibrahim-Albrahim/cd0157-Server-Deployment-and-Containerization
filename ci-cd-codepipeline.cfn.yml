@@ -70,9 +70,9 @@ Metadata:
           default: GitHub
         Parameters:
           - GitHubUser
-          - GitHubToken
-          - GitSourceRepo
-          - GitBranch
+          - GitHubToken 
+          - GitSourceRepo 
+          - GitBranch master
       - Label:
           default: CodeBuild
         Parameters:
@@ -80,26 +80,26 @@ Metadata:
       - Label:
           default: IAM
         Parameters:
-          - KubectlRoleName
+          - KubectlRoleName 
       - Label:
           default: EKS
         Parameters:
-          - EksClusterName
+          - EksClusterName 
     ParameterLabels:
       GitHubUser:
-        default: Username
+        default: Ibrahim-Albrahim
       GitHubToken:
-        default: Access token
+        default: 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
       GitSourceRepo:
-        default: Repository
+        default: cd0157-Server-Deployment-and-Containerization
       GitBranch:
-        default: Branch
+        default: master
       CodeBuildDockerImage:
         default: Docker image
       KubectlRoleName:
-        default: kubectl IAM role
+        default: UdacityFlaskDeployCBKubectlRole
       EksClusterName:
-        default: EKS cluster name
+        default: simple-jwt-api
 
 
 Resources:
