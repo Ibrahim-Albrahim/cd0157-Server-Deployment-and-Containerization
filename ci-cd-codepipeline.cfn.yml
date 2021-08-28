@@ -17,7 +17,7 @@ Parameters:
   GitSourceRepo:
     Type: String
     Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
-    Default: FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS
+    Default: cd0157-Server-Deployment-and-Containerization
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository name
@@ -40,7 +40,7 @@ Parameters:
 
   GitHubUser:
     Type: String
-    Default: SudKul
+    Default: Ibrahim-Albrahim
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
@@ -70,9 +70,9 @@ Metadata:
           default: GitHub
         Parameters:
           - GitHubUser
-          - GitHubToken 
-          - GitSourceRepo 
-          - GitBranch master
+          - GitHubToken
+          - GitSourceRepo
+          - GitBranch
       - Label:
           default: CodeBuild
         Parameters:
@@ -80,26 +80,26 @@ Metadata:
       - Label:
           default: IAM
         Parameters:
-          - KubectlRoleName 
+          - KubectlRoleName
       - Label:
           default: EKS
         Parameters:
-          - EksClusterName 
+          - EksClusterName
     ParameterLabels:
       GitHubUser:
-        default: Ibrahim-Albrahim
+        default: Username
       GitHubToken:
-        default: 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
+        default: Access token
       GitSourceRepo:
-        default: cd0157-Server-Deployment-and-Containerization
+        default: Repository
       GitBranch:
-        default: master
+        default: Branch
       CodeBuildDockerImage:
         default: Docker image
       KubectlRoleName:
-        default: UdacityFlaskDeployCBKubectlRole
+        default: kubectl IAM role
       EksClusterName:
-        default: simple-jwt-api
+        default: EKS cluster name
 
 
 Resources:
